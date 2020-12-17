@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import Navigation from './components/Navigation/Navigation';
-import Landing from './components/Landing/Landing';
 import Rank from './components/Rank/Rank';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
@@ -169,7 +168,7 @@ class App extends Component {
           onRouteChange={this.onRouteChange} 
           isSignedIn={isSignedIn} 
         />
-        <Landing />
+        
         {isSignedIn
           ? <div>
               <div className="logo-rank">
