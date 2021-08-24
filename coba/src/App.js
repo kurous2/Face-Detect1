@@ -8,7 +8,8 @@ import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
 import './App.css';
 
-const url = "http://localhost:3001";
+const url = "https://server-web4.herokuapp.com";
+//const url = "http://localhost:3001";
 
 
 const particlesOptions = {
@@ -65,8 +66,8 @@ class App extends Component {
       files.forEach((file, i) => {
         formData.append(i, file)
       })
-      fetch(`${url}/image-upload`, {
-        method: 'POST',
+      fetch("https://server-web4.herokuapp.com/image-upload", {
+        method: 'post',
         body: formData
       })
         .then(res => res.json())
@@ -86,8 +87,8 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-    fetch(url + "/imageurl", {
-      method: 'POST',
+    fetch("https://server-web4.herokuapp.com/imageurl", {
+      method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         input: this.state.input
@@ -96,8 +97,8 @@ class App extends Component {
     .then(response => response.json())
     .then(response => {
       if (response) {
-        fetch(url + "/image", {
-          method: 'PUT',
+        fetch("https://server-web4.herokuapp.com/image", {
+          method: 'put',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             id: this.state.user.id
@@ -192,10 +193,12 @@ class App extends Component {
             ? <Signin 
                 loadUser={this.loadUser} 
                 onRouteChange={this.onRouteChange} 
+                url={url} 
               />
             : <Register 
                 loadUser={this.loadUser} 
                 onRouteChange={this.onRouteChange}  
+                url={url} 
               />
             )
         }

@@ -1,5 +1,5 @@
 {
-  "name": "coba",
+"name": "coba",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,17 +8,20 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.3.0",
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.5.3",
     "clarifai": "^2.9.1",
     "express": "^4.17.1",
     "gsap": "^3.5.1",
     "query-selector": "^2.0.0",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
     "react-particles-js": "^3.4.1",
     "react-scripts": "4.0.1",
     "react-tilt": "^0.1.4",
     "react-video-scroll": "^1.0.1",
+    "reactjs-navbar": "^1.0.2",
     "scrollmagic": "^2.0.8",
     "tachyons": "^4.12.0",
     "web-vitals": "^0.2.4"
